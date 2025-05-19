@@ -13,7 +13,7 @@ const CustomerSchema = new Schema(
       {
         product: {
           _id: { type: String, require: true },
-          name: { tyoe: String },
+          name: { type: String },
           banner: { type: String },
           price: { type: String },
         },
