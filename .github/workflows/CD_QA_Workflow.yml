@@ -25,7 +25,7 @@ jobs:
          echo PORT=8002  >> .env
          cat .env
     - name: Create Customers Env file
-      working-directory: ./customers
+      working-directory: ./customer
       run:  |
          touch .env
          echo APP_SECRET ='mfunfunufnuf'  >> .env
