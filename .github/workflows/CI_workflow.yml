@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        service: [customer, products, shopping]
 
     steps:
       - uses: actions/checkout@v4
@@ -20,8 +20,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Test Customer Service
-        working-directory: ./customer
+      - name: Test ${{ matrix.service }} Service
+        working-directory: ./${{ matrix.service }}
         run: |
           npm ci
           npm test
