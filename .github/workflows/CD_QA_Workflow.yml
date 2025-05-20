@@ -59,3 +59,4 @@ jobs:
          version_label: "ver-${{ github.sha }}"
          region: eu-central-1
          deployment_package: deploy.zip
+         existing_bucket_name: "elasticbeanstalk-eu-central-1-048094965207"
